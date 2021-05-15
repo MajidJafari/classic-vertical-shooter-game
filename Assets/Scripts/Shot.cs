@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Pool;
+using UnityEngine;
 
 public class Shot : Pool.Object
 {
@@ -28,4 +28,6 @@ public class Shot : Pool.Object
     {
         return this;
     }
+
+    public override ObjectTypes GetPoolObjectType() => Pool.ObjectTypes.Shot;
 }

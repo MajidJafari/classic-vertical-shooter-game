@@ -11,8 +11,7 @@ namespace Pool
 
         internal Boolean isAvailable { set; get; }
 
-        public ObjectTypes poolObjectType;
-
+        public abstract ObjectTypes GetPoolObjectType();
         public abstract Object ResetProps();
 
         public abstract bool ShouldBePushed();

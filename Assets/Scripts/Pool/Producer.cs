@@ -39,7 +39,7 @@ namespace Pool
 
         public void Push(Object @object)
         {
-            if (element.poolObjectType == @object.poolObjectType)
+            if (element.GetPoolObjectType() == @object.GetPoolObjectType())
             {
                 if (pool.Count + 1 <= size)
                 {

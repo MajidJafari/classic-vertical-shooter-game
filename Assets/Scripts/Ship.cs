@@ -11,8 +11,6 @@ public class Ship : Pool.Consumer
 
     public float screenBoundary;
 
-    public Shot shot;
-
     // Start is called before the first frame update
     void Start()
     {

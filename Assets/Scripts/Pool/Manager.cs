@@ -49,7 +49,7 @@ namespace Pool
 
         public static void AddProducer(Object @object)
         {
-            var type = @object.poolObjectType;
+            var type = @object.GetPoolObjectType();
             if (!Manager.producers.ContainsKey(type))
             {
                 Manager.producers.Add(type, new Producer<Object>(@object));

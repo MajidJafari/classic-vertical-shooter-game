@@ -302,7 +302,6 @@ MonoBehaviour:
   speed: 5
   initialPosition: {x: 0, y: -2.8, z: 0}
   screenBoundary: 5
-  shot: {fileID: 2293448744167669501, guid: fb56c523bfed54641843be0546a81654, type: 3}
 --- !u!1 &947133969
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434293834}
   - component: {fileID: 1434293833}
+  - component: {fileID: 1434293835}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -526,6 +526,9 @@ MonoBehaviour:
   - objectType: 0
     size: 7
     position: {x: 0, y: 0, z: 0}
+  - objectType: 1
+    size: 30
+    position: {x: 0, y: 0, z: 0}
 --- !u!4 &1434293834
 Transform:
   m_ObjectHideFlags: 0
@@ -540,3 +543,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1434293835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434293832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa011dc14cb7b34c9301fcecea86f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolObjectTypeToConsume: 1
