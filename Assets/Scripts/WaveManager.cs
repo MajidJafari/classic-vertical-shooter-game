@@ -11,7 +11,9 @@ public class WaveManager : Pool.Consumer
         for (int i = 0; i < 15; i++)
         for (int j = 0; j < 6; j++)
         {
-            Consume<Alien>(new Vector3((i - 7) * 0.5f, (j - 2) * 0.8f, 0));
+            Consume<Alien>(new Vector3((i - 7) * 0.5f,
+                (j - 2) * 0.8f,
+                0));
         }
     }
 

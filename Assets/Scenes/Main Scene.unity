@@ -524,9 +524,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolConfig:
   - objectType: 0
+    object: {fileID: 2637555446048348991, guid: fb56c523bfed54641843be0546a81654,
+      type: 3}
     size: 7
     position: {x: 0, y: 0, z: 0}
   - objectType: 1
+    object: {fileID: 3922498902678723750, guid: 7fea945be2228964b9e481905ed40b03,
+      type: 3}
     size: 30
     position: {x: 0, y: 0, z: 0}
 --- !u!4 &1434293834
