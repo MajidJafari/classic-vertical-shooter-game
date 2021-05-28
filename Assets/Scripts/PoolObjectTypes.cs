@@ -3,6 +3,7 @@
     public enum ObjectTypes
     {
         Shot,
-        Alien
+        Alien,
+        AlienShot,
     }
 }

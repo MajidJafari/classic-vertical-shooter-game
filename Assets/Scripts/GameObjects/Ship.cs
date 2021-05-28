@@ -50,4 +50,21 @@ public class Ship : Pool.Consumer
                     transform.position.z);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("here");
+        if (other.gameObject.GetComponent<AlienShot>())
+        {
+            Destroy (gameObject);
+        }
+    }
+
+    void OnEnable() {
+        AlienShot.hitShip += Destroy;
+    }
+
+    void Destroy() {
+        Destroy(gameObject);
+    }
 }
