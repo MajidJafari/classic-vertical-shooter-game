@@ -20,6 +20,7 @@ public class Ship : Pool.Consumer
     // Update is called once per frame
     void Update()
     {
+        this.transform.rotation = Quaternion.Euler(0, 0, 0);
         var translationAmount = speed * Time.deltaTime;
         if (Input.GetKey("right"))
         {
@@ -51,20 +52,13 @@ public class Ship : Pool.Consumer
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnEnable()
     {
-        Debug.Log("here");
-        if (other.gameObject.GetComponent<AlienShot>())
-        {
-            Destroy (gameObject);
-        }
+        Scoring.onLifeZero += Destroy;
     }
 
-    void OnEnable() {
-        AlienShot.hitShip += Destroy;
-    }
-
-    void Destroy() {
-        Destroy(gameObject);
+    void Destroy()
+    {
+        Destroy (gameObject);
     }
 }

@@ -10,6 +10,7 @@ public class AlienShot : Pool.Object
 
     public override Pool.Object ResetProps()
     {
+        this.transform.rotation = Quaternion.identity;
         return this;
     }
 
