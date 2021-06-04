@@ -10,7 +10,7 @@ public class TitleMenu : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            State.Manager.Instance.GoToNextState(State.States.StartingPlay);
+            State.Manager.Instance.GoToNextState(State.States.Loading);
         }
     }
 }

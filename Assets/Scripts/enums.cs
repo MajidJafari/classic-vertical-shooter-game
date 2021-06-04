@@ -13,7 +13,7 @@ namespace State
     public enum States
     {
         TitleMenu,
-        StartingPlay,
+        Loading,
         GamePlay,
         Dying,
         GameOver,
