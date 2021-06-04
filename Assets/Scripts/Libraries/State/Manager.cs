@@ -8,6 +8,10 @@ namespace State
 {
     public class Manager : MonoBehaviour
     {
+        public delegate void OnStateChange(States state);
+
+        public static event OnStateChange onStateChange;
+
         private bool loading = false;
 
         private static Manager _instance;
@@ -42,7 +46,10 @@ namespace State
             {
                 this.loading = true;
                 SetScene (nextState);
-
+                if (onStateChange != null)
+                {
+                    onStateChange (nextState);
+                }
             }
         }
 
@@ -55,8 +62,7 @@ namespace State
         private IEnumerator LoadScene(States state)
         {
             var asyncScene =
-                SceneManager
-                    .LoadSceneAsync((int) state, @LoadSceneMode.Single);
+                SceneManager.LoadSceneAsync((int) state, @LoadSceneMode.Single);
 
             //Wait until we are done loading the scene
             while (!asyncScene.isDone)
@@ -70,7 +76,6 @@ namespace State
                 yield return null;
             }
 
-            
             this.loading = false;
         }
     }
