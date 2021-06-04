@@ -4,6 +4,19 @@
     {
         Shot,
         Alien,
-        AlienShot,
+        AlienShot
+    }
+}
+
+namespace State
+{
+    public enum States
+    {
+        TitleMenu,
+        StartingPlay,
+        GamePlay,
+        Dying,
+        GameOver,
+        NextLevel
     }
 }
